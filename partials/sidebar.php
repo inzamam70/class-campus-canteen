@@ -45,8 +45,10 @@
                         <span>
                             '.$mainnavitem.'
                         </span>
-                    </a>
-                </li>';
+                    </a>';
+                    
+
+                echo '</li>';
                 }
 
             }
@@ -60,6 +62,7 @@
                             '.$formnavitem.'
                         </span>
                     </a>
+                    
                 </li>';
                 }
             }
