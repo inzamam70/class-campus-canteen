@@ -18,7 +18,7 @@
     <?php include_once($partialfrontend.'navfrontend.php'); ?>
 
 <!-- cursol -->
-<?php include_once($partialfrontend.'cursor.php'); ?>
+<?php include_once($partialfrontend.'slider.php'); ?>
 
 <!-- about -->
 <?php include_once($partialfrontend.'about.php'); ?>
