@@ -1,0 +1,39 @@
+[
+    {
+        "src":"../global_assets/img/corn.jpg",
+        "title":"Corn",
+        "caption":"10$",
+        "url":"productdetails.php"
+    },
+    {
+        "src":"../global_assets/img/nasos.jpg",
+        "title":"Nasos",
+        "caption":"20$",
+        "url":"productdetails.php"
+    },
+    {
+        "src":"../global_assets/img/salad.jpg",
+        "title":"Salad",
+        "caption":"15$",
+        "url":"productdetails.php"
+    },
+    {
+        "src":"../global_assets/img/rice.jpg",
+        "title":"Rice",
+        "caption":"15$",
+        "url":"productdetails.php"
+    },
+    {
+        "src":"../global_assets/img/cursol1 (1).jpg",
+        "title":"Fruits",
+        "caption":"15$",
+        "url":"productdetails.php"
+    },
+    {
+        "src":"../global_assets/img/donat.jpg",
+        "title":"Donat",
+        "caption":"15$",
+        "url":"productdetails.php"
+    }
+
+]
