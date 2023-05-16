@@ -1,0 +1,18 @@
+[
+    {
+        "src": "../global_assets/img/carsol1.jpg",
+        "tittle": "Best Quality Food",
+        "caption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+    },
+    {
+        "src": "../global_assets/img/carsol3.jpg",
+        "tittle": "Well Dedication",
+        "caption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+    },
+    {
+        "src":"../global_assets/img/silder3.jpg",
+        "tittle":"Testy & Jussy",
+        "caption":"Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+    }
+
+]
