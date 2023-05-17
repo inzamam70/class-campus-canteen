@@ -54,7 +54,11 @@ $slideritems = json_decode($sliderjason);
 							</div>
 
 							<div class="card-body">
-								Create | Trash (Delete | Restore) | Download XL | Download PDF | Print View
+								<ul>
+									<li><a href="slider_index_grid.php">Grid View</a></li>
+									<li><a href="slider_index.php">List View</a></li>
+								</ul>
+								<a href="slider_create.php">Create</a> | Trash (Delete | Restore) | Download XL | Download PDF | Print View
 							</div>
 
 							<div class="table-responsive">
@@ -84,10 +88,10 @@ $slideritems = json_decode($sliderjason);
 											<tr>
 												<td title="<?= $slide->uuid ?>"><?= ++$key ?></td>
 												<td><?= $slide->tittle ?></td>
-												<td><img src="<?= $FRONTEND_URL . $slide->src ?>" style="width:100px;height:100px"></td>
+												<td><img src="<?= $FRONTEND_URL . $slide->src ?>" style="width:60px;height:60px"></td>
 												<!-- <td><?= $slide->alt ?></td> -->
 												<td><?= $slide->caption ?></td>
-												<td> Show | Edit | Delete | Activate/InActive | Copy</td>
+												<td> <a href="slider_show.php">Show</a> | Edit | Delete | Activate/InActive | Copy</td>
 											</tr>
 										<?php
 										endforeach

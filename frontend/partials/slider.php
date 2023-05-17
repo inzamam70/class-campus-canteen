@@ -34,11 +34,11 @@ $slideritems = json_decode($sliderjason);
     $active = 'active';
     foreach ($slideritems as $key => $slaideritem) :
 
-      if (0 == $key) {
-        $active = 'active';
-      } else {
-        $active = '';
-      }
+      // if (0 == $key) {
+      //   $active = 'active';
+      // } else {
+      //   $active = '';
+      // }
     ?>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="<?= $key ?>" class="<?= $active ?>" aria-current="true" aria-label="Slide 1"></button>
     <?php
