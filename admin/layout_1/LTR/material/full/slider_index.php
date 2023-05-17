@@ -91,7 +91,7 @@ $slideritems = json_decode($sliderjason);
 												<td><img src="<?= $FRONTEND_URL . $slide->src ?>" style="width:60px;height:60px"></td>
 												<!-- <td><?= $slide->alt ?></td> -->
 												<td><?= $slide->caption ?></td>
-												<td> <a href="slider_show.php">Show</a> | Edit | Delete | Activate/InActive | Copy</td>
+												<td> <a href="slider_show.php?id=<?=$slide->id?>">Show</a> | Edit | Delete | Activate/InActive | Copy</td>
 											</tr>
 										<?php
 										endforeach

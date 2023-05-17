@@ -52,8 +52,8 @@ $slideritems = json_decode($sliderjason);
     $active = 'active';
     foreach ($slideritems as $key=> $slaideritem) :
     ?>
-      <div class="carousel-item  <?=$slaideritem->id == 0 ? $active : "" ?>">
-        <img src="<?=$FRONTEND_URL.$slaideritem->src ?>" class="d-block w-100" alt="...">
+      <div class="carousel-item  <?=$slaideritem->id == 1 ? $active : "" ?>">
+        <img src="<?=$FRONTEND_URL.$slaideritem->src ?>" class="d-block w-100" alt="<?=$slaideritem->alt?>">
         <div class="carousel-caption ">
           <h5 style="color: white;"><?= $slaideritem->tittle ?></h5>
           <p style="color: white;"><?= $slaideritem->caption ?></p>

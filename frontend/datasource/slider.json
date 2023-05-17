@@ -1,22 +1,25 @@
 [
     {
-        "id": 0,
+        "id": 1,
         "uuid":"asdf",
         "src": "/frontend/global_assets/img/carsol1.jpg",
+        "alt":"Slider 1 alter",
         "tittle": "Best Quality Food",
         "caption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
     },
     {
-        "id" : 1,
+        "id" : 2,
         "uuid":"asdfs",
         "src": "/frontend/global_assets/img/carsol3.jpg",
+        "alt":"Slider 2 alter",
         "tittle": "Well Dedication",
         "caption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
     },
     {
-        "id" : 2,
+        "id" : 3,
         "uuid":"dfgdfg",
         "src":"/frontend/global_assets/img/silder3.jpg",
+        "alt":"Slider 3 alter",
         "tittle":"Testy & Jussy",
         "caption":"Lorem Ipsum is simply dummy text of the printing and typesetting industry"
     }

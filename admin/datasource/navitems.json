@@ -1,28 +1,30 @@
 [
     {
-        "slider Management": [
-            "Create a Slider",
+        "Slider Management":[
+            "Create a Slide",
             "Slides List"
         ]
     },
     {
-        "Main": [
-            "Dashboard",
-            "Layouts",
-            "Themes",
-            "Starter Kits",
+        "Product":[
+            "Create Product",
+            "Product Lists",
+            "Category",
+            "Category List",
             "Change Log",
             " RTL version"
         ]
     },
-    {
-        "Forms": [
-            "Form components",
-            "JSON forms",
-            "Text editors",
-            "Pickers",
-            "Form layouts"
-        ]
-    },
-    {}
+
+    {   
+            "Forms":
+            
+            [
+                "Form Components" ,
+                "JSON Forms", 
+                "Text Editors", 
+                "Pickers", 
+                "Form Layouts"
+            ]
+    }
 ]
