@@ -37,7 +37,7 @@
                     <tbody class="table-light">
                         <tr>
                             <td>1</td>
-                            <td><img src="../global_assets/img/corn.jpg" class="" style="width: 30px;"></td>
+                            <td><img src="../global_assets/img/product1.jpg" class="" style="width: 30px;"></td>
                             <td>Corn Shup</td>
                             <td>
                                 ৳<span class="price">10</span>
@@ -54,7 +54,7 @@
 
                         <tr>
                             <td>2</td>
-                            <td><img src="../global_assets/img/rice.jpg" style="width: 30px;"></td>
+                            <td><img src="../global_assets/img/product2.jpg" style="width: 30px;"></td>
                             <td>Rice</td>
                             <td>
                                 ৳<span class="price">15</span>

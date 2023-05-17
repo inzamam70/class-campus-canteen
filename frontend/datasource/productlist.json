@@ -1,37 +1,37 @@
 [
     {
-        "src":"../global_assets/img/corn.jpg",
-        "title":"Corn",
+        "src":"../global_assets/img/product1.jpg",
+        "title":"I-Phone",
         "caption":"10$",
         "url":"productdetails.php"
     },
     {
-        "src":"../global_assets/img/nasos.jpg",
-        "title":"Nasos",
+        "src":"../global_assets/img/product2.jpg",
+        "title":"Head Phone",
         "caption":"20$",
         "url":"productdetails.php"
     },
     {
-        "src":"../global_assets/img/salad.jpg",
-        "title":"Salad",
+        "src":"../global_assets/img/product3.jpg",
+        "title":"Laptop",
         "caption":"15$",
         "url":"productdetails.php"
     },
     {
-        "src":"../global_assets/img/rice.jpg",
-        "title":"Rice",
+        "src":"../global_assets/img/product4.jpg",
+        "title":"Air Pods",
         "caption":"15$",
         "url":"productdetails.php"
     },
     {
-        "src":"../global_assets/img/cursol1 (1).jpg",
-        "title":"Fruits",
+        "src":"../global_assets/img/product5.jpg",
+        "title":"AC",
         "caption":"15$",
         "url":"productdetails.php"
     },
     {
-        "src":"../global_assets/img/donat.jpg",
-        "title":"Donat",
+        "src":"../global_assets/img/product6.jpg",
+        "title":"Camera",
         "caption":"15$",
         "url":"productdetails.php"
     }

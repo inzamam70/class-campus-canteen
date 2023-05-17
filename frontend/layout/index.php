@@ -23,14 +23,14 @@
   <?php include_once($partialfrontend . 'slider.php'); ?>
 
   <!-- about -->
-  <?php include_once($partialfrontend . 'about.php'); ?>
+  
 
   <section id="productlist" class="productlist section-padding">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="section-header text-center pb-5">
-            <h2>Our Product</h2>
+            <h2> Product List</h2>
             <p>Lorem ipsum dolor sit amet consectetur<br> adipisicing elit. Ipsum, sit officia? </p>
 
 

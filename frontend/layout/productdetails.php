@@ -53,7 +53,7 @@
   <div class="container ">
         <div class="row mt-5">
             <div class="col-md-5 ps-lg-5 mt-3 ">
-                <img src="../global_assets/img/corn.jpg" alt="">
+                <img src="../global_assets/img/product1.jpg" alt="">
             </div>
             <div class="col-md-7">
                 <p class="new text-center">NEW</p>

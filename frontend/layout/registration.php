@@ -23,7 +23,7 @@
                     <img src="../global_assets/img/login.jpg" class="" alt="" width="100%" height="100%">
                 </div>
                 <div class="col-lg-7 px-5 pt-5">
-                    <h1 class="font-weight-bold py-3 text-danger">Campus Canteen</h1>
+                    <h1 class="font-weight-bold py-3 text-danger">Registration</h1>
                     <h4>Make your account</h4>
                     <form action="">
                         <div class="form-row">
