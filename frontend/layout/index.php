@@ -23,6 +23,7 @@
   <?php include_once($partialfrontend . 'slider.php'); ?>
 
   <!-- about -->
+  <?php include_once($partialfrontend.'about.php');?>
   
 
   <section id="productlist" class="productlist section-padding">

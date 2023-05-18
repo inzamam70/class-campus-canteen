@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Home page</title>
+    <title>Contact page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous" >
@@ -22,7 +22,7 @@
             <div class="row d-flex justify-content-center">
                
                 <div class="col-lg-7 px-5 pt-5 ">
-                    <h1 class="font-weight-bold py-3 d-flex justify-content-center" style="color: red;">Welcome</h1>
+                    <h1 class="font-weight-bold py-3 d-flex justify-content-center" style="color: white;">Campus Canteen</h1>
                     <h4 class="d-flex justify-content-center" style="color: white;">Contact Us</h4>
                     <form action="">
 

@@ -55,27 +55,27 @@ $slideritems = json_decode($sliderjason);
 			                	<form action="slider_create_processor.php" method="get" >
 									<div class="form-group">
 										<label>Title</label>
-										<input name="title" type="text" class="form-control" placeholder="Eugene Kopyov">
+										<input name="title" type="text" class="form-control" placeholder="Enter Title">
 									</div>
 
 									<div class="form-group">
 										<label>Caption</label>
-										<input name="caption" type="text" class="form-control" placeholder="Your strong password">
+										<input name="caption" type="text" class="form-control" placeholder="Enter Caption">
 									</div>
 
 									<div class="form-group">
 										<label>Alt</label>
-										<input name="alt" type="text" class="form-control" placeholder="Your strong password">
+										<input name="alt" type="text" class="form-control" placeholder="Alter">
 									</div>
 
                                     <div class="form-group">
 										<label>URL</label>
-										<input name="url" type="text" class="form-control" placeholder="Your strong password">
+										<input name="url" type="url" class="form-control" placeholder="Enter url">
 									</div>
 
                                     <div class="form-group">
 										<label>Upload Picture</label>
-										<input type="password" class="form-control" placeholder="Your strong password">
+										<input type="file" class="form-control" placeholder="Upload Picture">
 									</div>
 
 									<div class="d-flex justify-content-start align-items-center">

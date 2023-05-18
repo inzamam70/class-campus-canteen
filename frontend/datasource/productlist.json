@@ -1,37 +1,37 @@
 [
     {
         "src":"../global_assets/img/product1.jpg",
-        "title":"I-Phone",
+        "title":"Chaomin",
         "caption":"10$",
         "url":"productdetails.php"
     },
     {
         "src":"../global_assets/img/product2.jpg",
-        "title":"Head Phone",
+        "title":"Strabary",
         "caption":"20$",
         "url":"productdetails.php"
     },
     {
         "src":"../global_assets/img/product3.jpg",
-        "title":"Laptop",
+        "title":"Donat",
         "caption":"15$",
         "url":"productdetails.php"
     },
     {
         "src":"../global_assets/img/product4.jpg",
-        "title":"Air Pods",
+        "title":"Naetchos",
         "caption":"15$",
         "url":"productdetails.php"
     },
     {
         "src":"../global_assets/img/product5.jpg",
-        "title":"AC",
+        "title":"Rice",
         "caption":"15$",
         "url":"productdetails.php"
     },
     {
         "src":"../global_assets/img/product6.jpg",
-        "title":"Camera",
+        "title":"Salad",
         "caption":"15$",
         "url":"productdetails.php"
     }

@@ -55,8 +55,8 @@ $slideritems = json_decode($sliderjason);
       <div class="carousel-item  <?=$slaideritem->id == 1 ? $active : "" ?>">
         <img src="<?=$FRONTEND_URL.$slaideritem->src ?>" class="d-block w-100" alt="<?=$slaideritem->alt?>">
         <div class="carousel-caption ">
-          <h5 style="color: red;"><?= $slaideritem->tittle ?></h5>
-          <p style="color: red;"><?= $slaideritem->caption ?></p>
+          <h5 style="color: white;"><?= $slaideritem->tittle ?></h5>
+          <p style="color: white;"><?= $slaideritem->caption ?></p>
           <p><a href="#" class="btn btn-warning mt3">Show More</a></p>
         </div>
       </div>
