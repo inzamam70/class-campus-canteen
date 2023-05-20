@@ -27,6 +27,17 @@ $slide = [
 $sliderjason = file_get_contents($frontenddatasource . "slider.json");
 $slideritems = json_decode($sliderjason);
 
+foreach($slideritems as $aslide){
+    $ids[] = $aslide->id;
+}
+
+sort($ids);
+$lastIndex = count($ids)-1;
+$highestId = $ids[$lastIndex];
+$curentUniqueId = $highestId+1;
+
+$slide['id'] = $curentUniqueId ;
+
 $slideritems[] = (object) $slide;
 $data_slides = json_encode($slideritems);
 // dd($data_slides);

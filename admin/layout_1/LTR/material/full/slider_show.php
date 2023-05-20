@@ -67,7 +67,7 @@ foreach ($slideritems as $aslide) {
 				<div class="row">
 					<div class="col-xl-12">
 
-						<div class="col-sm-6 col-xl-3">
+						<div class="col-sm-12 col-xl-12">
 							<div class="card">
 								<div class="card-img-actions mx-1 mt-1">
 									<img class="card-img img-fluid" src="<?= $slide->src ?>" alt="<?= $slide->alt ?>" style="height:200px">
@@ -88,7 +88,7 @@ foreach ($slideritems as $aslide) {
 								<div class="d-flex flex-wrap justify-content-center p-3">
 											
 											<a href="#" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1" style="color: blue;"><i class="icon-pencil"></i></a>
-											<a href="#" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1" style="color: red;"><i class="icon-trash"></i></a>
+											<a href="slider_delete.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1" style="color: red;"><i class="icon-trash"></i></a>
 										</div>
 							</div>
 						</div>
