@@ -55,27 +55,25 @@ $navItems = json_decode($navItemsInJson);
                 foreach ($navItems as $navItem) {
                     //  dd(array_keys(get_object_vars($navItem)));
                     $arrKey = array_keys(get_object_vars($navItem));
+                    
                     foreach ($arrKey as $key) {
-                        //dd($key);
-                        echo '<li class="nav-item-header">
-                <div class="text-uppercase font-size-xs line-height-xs">'
-                            . $key .
-                            '</div> <i class="icon-menu" title="Main"></i></li>';
-                        // dd($navitem);
+                        echo 
+                        '<li class="nav-item-header">
+                            <div class="text-uppercase font-size-xs line-height-xs">'
+                                . $key.
+                            '</div> 
+                            <i class="icon-menu" title="Main"></i>
+                        </li>';
                         foreach ($navItem->$key as $subnavitem) {
-                            //    dd($subnavitem);
-                            echo '<li class="nav-item">
-
-
-                    <a href="slider_index.php" class="nav-link active">
-                    <i class="icon-home4"></i>
-                        <span>
-                            ' . $subnavitem . '
-                        </span>
-                    </a>';
-
-
-                            echo '</li>';
+                            echo 
+                            '<li class="nav-item">
+                                <a href="'. $subnavitem->url .'" class="nav-link active">
+                                    <i class="icon-home4"></i>
+                                    <span>
+                                        ' . $subnavitem->name . '
+                                    </span>
+                                </a>';
+                            '</li>';
                         }
                     }
 
