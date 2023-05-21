@@ -11,7 +11,7 @@ $id = $_GET['id'];
 $sliderjason = file_get_contents($frontenddatasource . "slider.json");
 $slideritems = json_decode($sliderjason);
 
-$slide;
+$slide ;
 foreach ($slideritems as $aslide) {
 	if ($aslide->id == $id) {
 		$slide = $aslide;
@@ -20,15 +20,7 @@ foreach ($slideritems as $aslide) {
 }
 
 
-// dd($slide);
-// $slideIndex = $_GET['slideIndex'];
-// $slide = $slides[$slideIndex];
 
-/**
- * @TODO
- * handle edge case
- * security: untrust user input
- */
 ?>
 
 <!DOCTYPE html>

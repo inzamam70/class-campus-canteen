@@ -44,7 +44,7 @@ else{
 }
 if($result){
     $message = "Data is updated";
-    $_SESSION['message'] = $message;
+    set_session('message',$message);
     // redirect("slider_index.php?message =".$message);
     redirect("slider_index.php");
 }

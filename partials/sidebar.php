@@ -27,39 +27,21 @@ $navItems = json_decode($navItemsInJson);
         <!-- Main navigation -->
         <div class="card card-sidebar-mobile">
             <ul class="nav nav-sidebar" data-nav-type="accordion">
-
-
-               
-          
-            <?php foreach($navItems as $ket=>$slide):?>
-    <li class="nav-item nav-item-submenu">
-    <a href="" class="nav-link">
-        <i class="icon-copy"></i> 
-        <span><?=$slide->name?></span>
-    </a>
-
-    <ul class="nav nav-group-sub" data-submenu-title="Layouts">
-        <li class="nav-item"><a href="index.html" class="nav-link active">Default layout</a></li>
-        <li class="nav-item"><a href="../../../../layout_2/LTR/material/full/index.html" class="nav-link">Layout 2</a></li>
-        <li class="nav-item"><a href="../../../../layout_3/LTR/material/full/index.html" class="nav-link">Layout 3</a></li>
-        <li class="nav-item"><a href="../../../../layout_4/LTR/material/full/index.html" class="nav-link">Layout 4</a></li>
-        <li class="nav-item"><a href="../../../../layout_5/LTR/material/full/index.html" class="nav-link">Layout 5</a></li>
-        <li class="nav-item"><a href="../../../../layout_6/LTR/material/full/index.html" class="nav-link disabled">Layout 6 <span class="badge bg-transparent align-self-center ml-auto">Coming soon</span></a></li>
-    </ul>
-</li>
-<?php endforeach ?>
-
-
-             
- 
-
-
-
-        
-
-
-
-
+                <?php foreach ($navItems as $ket => $slide) : ?>
+                    <li class="nav-item <?= isset($slide->subnav) ? 'nav-item-submenu' : '' ?>">
+                        <a href="<?= isset($slide->url) ? $slide->url : '' ?>" class="nav-link">
+                            <i class="<?= $slide->icon ?>"></i>
+                            <span><?= $slide->name ?></span>
+                        </a>
+                        <?php if (isset($slide->subnav)) : ?>
+                            <ul class="nav nav-group-sub" data-submenu-title="<?= $slide->name ?>">
+                                <?php foreach ($slide->subnav as $submenu) : ?>
+                                    <li class="nav-item"><a href="<?= $submenu->url ?>" class="nav-link legitRipple"><?= $submenu->name ?></a></li>
+                                <?php endforeach ?>
+                            </ul>
+                        <?php endif ?>
+                    </li>
+                <?php endforeach ?>
             </ul>
         </div>
         <!-- /main navigation -->

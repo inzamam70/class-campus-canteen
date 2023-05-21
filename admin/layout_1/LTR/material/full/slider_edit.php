@@ -1,34 +1,25 @@
 <?php include_once($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'config.php') ?>
 
 <?php
-
-/** collect the intended ID */
-$id = $_GET['id'];
-
-
-
-/** communicate with datasource and get data for that id */
-$sliderjason = file_get_contents($frontenddatasource . "slider.json");
-$slideritems = json_decode($sliderjason);
-
-$slide;
-foreach ($slideritems as $aslide) {
-	if ($aslide->id == $id) {
-		$slide = $aslide;
-		break;
-	}
-}
-
-
-// dd($slide);
-// $slideIndex = $_GET['slideIndex'];
-// $slide = $slides[$slideIndex];
-
-/**
- * @TODO
- * handle edge case
- * security: untrust user input
- */
+   /** collect the intended ID */
+   $id = $_GET['id'];
+    
+     /** communicate with datasource and get data for that id */
+	 $sliderjason = file_get_contents($frontenddatasource . "slider.json");
+	 $slideritems = json_decode($sliderjason);
+    
+    $slide = null;
+    foreach($slideritems as $aslide){
+        if($aslide->id == $id){
+            $slide = $aslide;
+            break;
+        }
+    }
+	
+    
+    
+    //  d($slide);
+ 
 ?>
 
 <!DOCTYPE html>
@@ -67,8 +58,9 @@ foreach ($slideritems as $aslide) {
 				<div class="row">
 					<div class="col-xl-12">
                     <div class="card">
+					
 							<div class="card-header header-elements-inline">
-				                <h6 class="card-title">Create a Slide for the Slider</h6>
+				                <h6 class="card-title">Edit Slide Information</h6>
 								<div class="header-elements">
 									<div class="list-icons">
 				                		<a class="list-icons-item" data-action="collapse"></a>
@@ -80,24 +72,26 @@ foreach ($slideritems as $aslide) {
 
 			                <div class="card-body">
 			                	<form action="slider_edit_processor.php" method="post" >
+								<input name="id" type="text" class="form-control"  value="<?=$aslide->id?>" />
+										<input name="uuid" type="text" class="form-control"  value="<?=$aslide->uuid?>" />
 									<div class="form-group">
 										<label>Title</label>
-										<input name="title" type="text" class="form-control" placeholder="Enter Title" value="<?=$slide->id?>" >
+										<input name="title" type="text" class="form-control" placeholder="Enter Title" value="<?=$aslide->tittle?>" >
 									</div>
 
 									<div class="form-group">
 										<label>Caption</label>
-										<input name="caption" type="text" class="form-control" placeholder="Enter Caption">
+										<input name="caption" type="text" class="form-control" placeholder="Enter Caption" value="<?=$aslide->caption?>">
 									</div>
 
 									<div class="form-group">
 										<label>Alt</label>
-										<input name="alt" type="text" class="form-control" placeholder="Alter">
+										<input name="alt" type="text" class="form-control" placeholder="Alter" value="<?=$aslide->alt?>">
 									</div>
 
                                     <div class="form-group">
 										<label>URL</label>
-										<input name="url" type="url" class="form-control" placeholder="Enter url">
+										<input name="url" type="url" class="form-control" placeholder="Enter url" value="<?=$aslide->src?>">
 									</div>
 
                                     <div class="form-group">

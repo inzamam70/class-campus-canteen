@@ -27,10 +27,10 @@ $curentUniqueId = null;
 $sliderjason = file_get_contents($frontenddatasource . "slider.json");
 $slideritems = json_decode($sliderjason);
 
-if(count($slides) > 0){
+if(count($slideritems) > 0){
 
 
-$id = [];
+$ids = [];
 foreach($slideritems as $aslide){
     $ids[] = $aslide->id;
 }
