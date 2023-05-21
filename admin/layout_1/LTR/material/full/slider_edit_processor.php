@@ -3,12 +3,12 @@
 
 
 
-$id = $_GET['id'];
-$uuid = $_GET['uuid'];
-$src = $_GET['url'];
-$alt =  $_GET['alt'];
-$title = $_GET['title'];
-$caption = $_GET['caption'];
+$id = $_POST['id'];
+$uuid = $_POST['uuid'];
+$src = $_POST['url'];
+$alt =  $_POST['alt'];
+$title = $_POST['title'];
+$caption = $_POST['caption'];
 
 
 $slide = [
@@ -21,35 +21,16 @@ $slide = [
 ];
 
 
-$curentUniqueId = null;
-
 
 $sliderjason = file_get_contents($frontenddatasource . "slider.json");
 $slideritems = json_decode($sliderjason);
 
-if(count($slides) > 0){
-
-
-$id = [];
-foreach($slideritems as $aslide){
-    $ids[] = $aslide->id;
-}
-    sort($ids);
-    $lastIndex = count($ids)-1;
-    $highestId = $ids[$lastIndex];
-    $curentUniqueId = $highestId+1;
-}else{
-    $curentUniqueId = 1;
+foreach($slideritems as $key=>$aslide){
+    if($aslide->id == $id)
+    break;
 }
 
-
-
-
-
-
-$slide['id'] = $curentUniqueId ;
-
-$slideritems[] = (object) $slide;
+$slideritems[$key] = (object) $slide;
 $data_slides = json_encode($slideritems);
 // dd($data_slides);
 
@@ -62,7 +43,10 @@ else{
     echo "file not found";
 }
 if($result){
-    redirect('slider_index.php');
+    $message = "Data is updated";
+    $_SESSION['message'] = $message;
+    // redirect("slider_index.php?message =".$message);
+    redirect("slider_index.php");
 }
 
 

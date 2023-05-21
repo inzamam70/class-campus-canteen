@@ -1,5 +1,9 @@
 <?php
 
+session_start();
+ini_set('display errors','on');
+error_reporting(E_ALL);
+
 function d($var)
 {
     echo "<pre>";

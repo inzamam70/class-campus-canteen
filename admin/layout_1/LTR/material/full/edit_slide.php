@@ -1,7 +1,34 @@
+<?php include_once($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'config.php') ?>
+
 <?php
-include_once($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'config.php');
+
+/** collect the intended ID */
+$id = $_GET['id'];
+
+
+
+/** communicate with datasource and get data for that id */
 $sliderjason = file_get_contents($frontenddatasource . "slider.json");
 $slideritems = json_decode($sliderjason);
+
+$slide;
+foreach ($slideritems as $aslide) {
+	if ($aslide->id == $id) {
+		$slide = $aslide;
+		break;
+	}
+}
+
+
+// dd($slide);
+// $slideIndex = $_GET['slideIndex'];
+// $slide = $slides[$slideIndex];
+
+/**
+ * @TODO
+ * handle edge case
+ * security: untrust user input
+ */
 ?>
 
 <!DOCTYPE html>
@@ -52,10 +79,10 @@ $slideritems = json_decode($sliderjason);
 							</div>
 
 			                <div class="card-body">
-			                	<form action="slider_create_processor.php" method="get" >
+			                	<form action="slider_edit_processor.php" method="post" >
 									<div class="form-group">
 										<label>Title</label>
-										<input name="title" type="text" class="form-control" placeholder="Enter Title" >
+										<input name="title" type="text" class="form-control" placeholder="Enter Title" value="<?=$slide->id?>" >
 									</div>
 
 									<div class="form-group">

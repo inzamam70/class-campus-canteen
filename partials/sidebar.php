@@ -7,29 +7,7 @@ $navItemsInJson = file_get_contents($mainnavitems . "navitems.json");
 $navItems = json_decode($navItemsInJson);
 
 
-// $navgroups = ['Main','Forms','Components','Layout', 'Data Visualization','Extension','Table','Page Kits'];
-// $mainnavitems = ['Dashboard','Layouts','Themes','Starter Kits','Change Log',' RTL version'];
-// $formnavitems = ['Form components','JSON forms','Text editors','Pickers','Form layouts'];
-// $componentsnavitems = ['Basic components','Content styling','Extra components','Color system','Animations','Icons'];
-// $layoutnavitems = ['Page layouts','Sidebars','Navbars','Vertical navigation','Horizontal navigation','Menu levels'];
-// $visualizationnavitems = ['Echarts library','D3 library','C3 library','Google charts','Mzzzaps integration'];
-// $extensionsnavitems = ['Extentions','JQuery UI','File uploaders','Event calenders','Internationalization'];
-// $tablesnavitems = ['Basic tables','Data tables','Data tables extantions','Responsive tables'];
-// $pagekitsnavitems = ['General pages','Service pages','User pages','Application pages','Widgets'];
 
-// $mainicons = ['<i class="icon-home4"></i>','<i class="icon-copy2"></i>','<i class="icon-color-sampler"></i>','<i class="icon-stack"></i>','<i class="icon-list"></i>','<i class="icon-width"></i>'];
-// $layoutsubnavitems = ['Default layout','Layout 2','Layout 3','Layout 4'];
-
-// $mainnavitem2d = [
-//     'Dashboard',
-//     'Layouts'=>$layoutsubnavitems,
-//     'Themes'];
-
-// $navgroup3d = [
-//     'Main'=>$mainnavitem2d,
-//     'Forms'=>$formnavitems
-// ];
-//dd($navgroup3d);
 
 ?>
 
@@ -51,130 +29,33 @@ $navItems = json_decode($navItemsInJson);
             <ul class="nav nav-sidebar" data-nav-type="accordion">
 
 
-                <?php
-                foreach ($navItems as $navItem) {
-                    //  dd(array_keys(get_object_vars($navItem)));
-                    $arrKey = array_keys(get_object_vars($navItem));
-                    
-                    foreach ($arrKey as $key) {
-                        echo 
-                        '<li class="nav-item-header">
-                            <div class="text-uppercase font-size-xs line-height-xs">'
-                                . $key.
-                            '</div> 
-                            <i class="icon-menu" title="Main"></i>
-                        </li>';
-                        foreach ($navItem->$key as $subnavitem) {
-                            echo 
-                            '<li class="nav-item">
-                                <a href="'. $subnavitem->url .'" class="nav-link active">
-                                    <i class="icon-home4"></i>
-                                    <span>
-                                        ' . $subnavitem->name . '
-                                    </span>
-                                </a>';
-                            '</li>';
-                        }
-                    }
+               
+          
+            <?php foreach($navItems as $ket=>$slide):?>
+    <li class="nav-item nav-item-submenu">
+    <a href="" class="nav-link">
+        <i class="icon-copy"></i> 
+        <span><?=$slide->name?></span>
+    </a>
+
+    <ul class="nav nav-group-sub" data-submenu-title="Layouts">
+        <li class="nav-item"><a href="index.html" class="nav-link active">Default layout</a></li>
+        <li class="nav-item"><a href="../../../../layout_2/LTR/material/full/index.html" class="nav-link">Layout 2</a></li>
+        <li class="nav-item"><a href="../../../../layout_3/LTR/material/full/index.html" class="nav-link">Layout 3</a></li>
+        <li class="nav-item"><a href="../../../../layout_4/LTR/material/full/index.html" class="nav-link">Layout 4</a></li>
+        <li class="nav-item"><a href="../../../../layout_5/LTR/material/full/index.html" class="nav-link">Layout 5</a></li>
+        <li class="nav-item"><a href="../../../../layout_6/LTR/material/full/index.html" class="nav-link disabled">Layout 6 <span class="badge bg-transparent align-self-center ml-auto">Coming soon</span></a></li>
+    </ul>
+</li>
+<?php endforeach ?>
+
+
+             
+ 
 
 
 
-                    // if($key === 1){
-                    //     foreach($formnavitems as $formnavitem){
-                    //         echo '<li class="nav-item">
-                    //         <a href="index.html" class="nav-link active">
-                    //         <i class="icon-home4"></i>
-                    //             <span>
-                    //                 '.$formnavitem.'
-                    //             </span>
-                    //         </a>
-
-                    //     </li>';
-                    //     }
-                    // }
-
-                    // if($key === 2){
-                    //     foreach($componentsnavitems as $componentsnavitem){
-                    //         echo '<li class="nav-item">
-                    //         <a href="index.html" class="nav-link active">
-                    //             <i class="icon-home4"></i>
-                    //             <span>
-                    //                 '.$componentsnavitem.'
-                    //             </span>
-                    //         </a>
-                    //     </li>';
-                    //     }
-                    // }
-
-                    // if($key === 3){
-                    //     foreach($layoutnavitems as $layoutnavitem){
-                    //         echo '<li class="nav-item">
-                    //         <a href="index.html" class="nav-link active">
-                    //             <i class="icon-home4"></i>
-                    //             <span>
-                    //                 '.$layoutnavitem.'
-                    //             </span>
-                    //         </a>
-                    //     </li>';
-                    //     }
-                    // }
-
-                    // if($key === 4){
-                    //     foreach($visualizationnavitems as $visualizationnavitem){
-                    //         echo '<li class="nav-item">
-                    //         <a href="index.html" class="nav-link active">
-                    //             <i class="icon-home4"></i>
-                    //             <span>
-                    //                 '.$visualizationnavitem.'
-                    //             </span>
-                    //         </a>
-                    //     </li>';
-                    //     }
-                    // }
-
-                    // if($key === 5){
-                    //     foreach($extensionsnavitems as $extensionsnavitem){
-                    //         echo '<li class="nav-item">
-                    //         <a href="index.html" class="nav-link active">
-                    //             <i class="icon-home4"></i>
-                    //             <span>
-                    //                 '.$extensionsnavitem.'
-                    //             </span>
-                    //         </a>
-                    //     </li>';
-                    //     }
-                    // }
-
-                    // if($key === 6){
-                    //     foreach($tablesnavitems as $tablesnavitem){
-                    //         echo '<li class="nav-item">
-                    //         <a href="index.html" class="nav-link active">
-                    //             <i class="icon-home4"></i>
-                    //             <span>
-                    //                 '.$tablesnavitem.'
-                    //             </span>
-                    //         </a>
-                    //     </li>';
-                    //     }
-                    // }
-
-                    // if($key === 7){
-                    //     foreach($pagekitsnavitems as $pagekitsnavitem){
-                    //         echo '<li class="nav-item">
-                    //         <a href="index.html" class="nav-link active">
-                    //             <i class="icon-home4"></i>
-                    //             <span>
-                    //                 '.$pagekitsnavitem.'
-                    //             </span>
-                    //         </a>
-                    //     </li>';
-                    //     }
-                    // }
-
-                }
-
-
-                ?>
+        
 
 
 

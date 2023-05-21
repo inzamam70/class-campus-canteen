@@ -98,7 +98,7 @@ $slideritems = json_decode($sliderjason);
 												<td>
 													<div class="d-flex justify-content-between  p-3">
 														<a href="slider_show.php?id=<?= $slide->id ?> " class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1 " style="color: green;"><i class="icon-eye"></i></a>
-														<a href="#" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1" style="color: blue;"><i class="icon-pencil"></i></a>
+														<a href="edit_slide.php?id=<?=$slide->id ?>" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1" style="color: blue;"><i class="icon-pencil"></i></a>
 														
 														<form action="slider_delete.php" method="post">
 														
