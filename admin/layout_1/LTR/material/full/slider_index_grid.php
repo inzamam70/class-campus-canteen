@@ -60,12 +60,11 @@ $slideritems = json_decode($sliderjason);
 									<li class=""><a href="slider_index_grid.php"> Grid View</a></li>
 									<li class=""><a href="slider_index.php">List View</a></li>
 								</ul>
-								<a href="slider_create.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: green;"><i class="icon-plus2"></i></a>
-								<a href="#" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon "style="color: red;"><i class="icon-file-pdf mr-3"></i></a>
-
-
-								Trash (Delete | Restore) | Download XL | Download PDF | Print View
-								|
+								<a href="slider_create.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: blue;"><i class="icon-plus2"></i></a> 
+								<a href="slider_create.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: red;"><i class="icon-trash"></i></a>  
+								<a href="slider_create.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: green;"><i class="icon-file-excel"></i></a>
+								<a href="slider_create.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: red;"><i class="icon-file-pdf"></i></a>  								
+								<a href="slider_create.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: green;"><i class="icon-printer2"></i></a> 
 							</div>
 
 							<div class="table-responsive">

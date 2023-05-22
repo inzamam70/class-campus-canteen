@@ -2,13 +2,24 @@
 <?php
 
 
+$filename = $_FILES['image']['name'];
+$filename = uniqid()."_".$_FILES['image']['name'];
 
-$id = $_GET['id'];
-$uuid = $_GET['uuid'];
-$src = $_GET['url'];
-$alt =  $_GET['alt'];
-$title = $_GET['title'];
-$caption = $_GET['caption'];
+$target = $_FILES['image']['tmp_name'];
+$destination = $uploads.$filename;
+
+$src = null;
+if(upload($target, $destination)){
+    $src = $filename ;
+}
+
+
+// $id = $_POST['id'];
+// $uuid = $_POST['uuid'];
+// $src = $_POST['url'];
+$alt =  $_POST['alt'];
+$title = $_POST['title'];
+$caption = $_POST['caption'];
 
 
 $slide = [

@@ -52,7 +52,7 @@ $slideritems = json_decode($sliderjason);
 							</div>
 
 			                <div class="card-body">
-			                	<form action="slider_create_processor.php" method="get" >
+			                	<form action="slider_create_processor.php" method="post" enctype="multipart/form-data">
 									<div class="form-group">
 										<label>Title</label>
 										<input name="title" type="text" class="form-control" placeholder="Enter Title" >
@@ -75,7 +75,7 @@ $slideritems = json_decode($sliderjason);
 
                                     <div class="form-group">
 										<label>Upload Picture</label>
-										<input type="file" class="form-control" placeholder="Upload Picture">
+										<input type="file" name="image" class="form-control" placeholder="Upload Picture">
 									</div>
 
 									<div class="d-flex justify-content-start align-items-center">

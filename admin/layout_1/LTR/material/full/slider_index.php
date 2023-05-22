@@ -101,7 +101,7 @@ $slideritems = json_decode($sliderjason);
 											<tr>
 												<td title="<?= $slide->uuid ?>"><?= ++$key ?></td>
 												<td><?= $slide->tittle ?></td>
-												<td><img src="<?= $slide->src ?>" style="width:60px;height:60px"></td>
+												<td><img src="<?=filter_var($slide->src,FILTER_VALIDATE_URL)? $slide->src : $webroot.'uploads/'.$slide->src ?>" style="width:60px;height:60px"></td>
 												<td><?= $slide->alt ?></td>
 												<td><?= $slide->caption ?></td>
 												<td>

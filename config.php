@@ -45,7 +45,14 @@ function redirect($url)
 {
     header("location:$url");
 }
-$webroot = "http://Campus-Canteen.test/" . DIRECTORY_SEPARATOR;
+
+function upload($target, $destination){
+    move_uploaded_file($target, $destination);
+    return true;
+}
+
+
+$webroot = "http://Campus-Canteen.test" . DIRECTORY_SEPARATOR;
 $adminurl = "admin/layout_1/LTR/material/full" . DIRECTORY_SEPARATOR;
 $frontendurl = "frontend/layout" . DIRECTORY_SEPARATOR;
 $docroot = $_SERVER['DOCUMENT_ROOT'];
@@ -54,3 +61,6 @@ $partialfrontend = $docroot . DIRECTORY_SEPARATOR . 'frontend/partials' . DIRECT
 $mainnavitems = $docroot . DIRECTORY_SEPARATOR . 'admin/datasource' . DIRECTORY_SEPARATOR;
 $frontenddatasource = $docroot . DIRECTORY_SEPARATOR . 'frontend/datasource' . DIRECTORY_SEPARATOR;
 $FRONTEND_URL = "http://Campus-Canteen.test";
+
+
+$uploads = $docroot. DIRECTORY_SEPARATOR.'uploads'. DIRECTORY_SEPARATOR;
