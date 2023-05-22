@@ -52,7 +52,7 @@ function upload($target, $destination){
 }
 
 
-$webroot = "http://Campus-Canteen.test" . DIRECTORY_SEPARATOR;
+$webroot = "http://Campus-Canteen.test/";
 $adminurl = "admin/layout_1/LTR/material/full" . DIRECTORY_SEPARATOR;
 $frontendurl = "frontend/layout" . DIRECTORY_SEPARATOR;
 $docroot = $_SERVER['DOCUMENT_ROOT'];
@@ -63,4 +63,4 @@ $frontenddatasource = $docroot . DIRECTORY_SEPARATOR . 'frontend/datasource' . D
 $FRONTEND_URL = "http://Campus-Canteen.test";
 
 
-$uploads = $docroot. DIRECTORY_SEPARATOR.'uploads'. DIRECTORY_SEPARATOR;
+$uploads = $docroot.'/uploads'. DIRECTORY_SEPARATOR;
