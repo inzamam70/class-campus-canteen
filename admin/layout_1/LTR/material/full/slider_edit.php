@@ -95,10 +95,12 @@
 										<label>URL</label>
 										<input name="url" type="url" class="form-control" placeholder="Enter url" value="<?=$aslide->src?>">
 									</div>
-										<img src="<?=$webroot . 'uploads/' .$aslide->src?>" height="100px">
+										
                                     <div class="form-group">
 										<label>Upload Picture</label>
-										<input type="file" class="form-control" placeholder="Upload Picture">
+										<input type="file" name="picture" class="form-control" placeholder="Upload Picture">
+										<img src="<?=$webroot . 'uploads/' .$aslide->src?>" style="height:100px" >
+										<input type="text" name="old_picture" class="form-control" value="<?=$aslide->src?>">
 									</div>
 
 

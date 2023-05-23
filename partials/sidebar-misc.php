@@ -28,7 +28,7 @@
 						</li>
 						<li class="nav-item nav-item-submenu">
 							<a href="#" class="nav-link">
-                                <i class="<?=?>"></i> 
+                                
                                 <span>Layouts</span>
                             </a>
 

@@ -1,0 +1,10 @@
+{
+    "name": "campus/canteen",
+    "type": "project",
+    "description": "",
+    "license": "MIT",
+    "require": {
+        "mpdf/mpdf": "^8.1"
+    }
+    
+}
