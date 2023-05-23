@@ -32,6 +32,7 @@ foreach($slideritems as $key=>$aslide){
 
 $slideritems[$key] = (object) $slide;
 $data_slides = json_encode($slideritems);
+
 // dd($data_slides);
 
 

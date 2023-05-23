@@ -2,7 +2,9 @@
 
 <?php
    /** collect the intended ID */
+ 
    $id = $_GET['id'];
+// dd($id);
     
      /** communicate with datasource and get data for that id */
 	 $sliderjason = file_get_contents($frontenddatasource . "slider.json");
@@ -79,10 +81,10 @@
 										<input name="title" type="text" class="form-control" placeholder="Enter Title" value="<?=$aslide->tittle?>" >
 									</div>
 
-									<div class="form-group">
+									<d	iv class="form-group">
 										<label>Caption</label>
 										<input name="caption" type="text" class="form-control" placeholder="Enter Caption" value="<?=$aslide->caption?>">
-									</div>
+									</d>
 
 									<div class="form-group">
 										<label>Alt</label>
@@ -93,11 +95,12 @@
 										<label>URL</label>
 										<input name="url" type="url" class="form-control" placeholder="Enter url" value="<?=$aslide->src?>">
 									</div>
-
+										<img src="<?=$webroot . 'uploads/' .$aslide->src?>" height="100px">
                                     <div class="form-group">
 										<label>Upload Picture</label>
 										<input type="file" class="form-control" placeholder="Upload Picture">
 									</div>
+
 
 									<div class="d-flex justify-content-start align-items-center">
 										<button type="submit" class="btn btn-light legitRipple">Cancel</button>
