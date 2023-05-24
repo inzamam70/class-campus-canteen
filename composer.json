@@ -6,16 +6,5 @@
     "require": {
         "mpdf/mpdf": "^8.1",
         "phpoffice/phpspreadsheet": "^1.28"
-    },
-
-   
-    "config": {
-        "platform": {
-            "php": "7.4"
-        }
     }
-}
-    
-
-
-   
+ }

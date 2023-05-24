@@ -4,9 +4,17 @@
 $sliderjason = file_get_contents($frontenddatasource . "slider.json");
 $slideritems = json_decode($sliderjason);
 
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+$spreadsheet = new Spreadsheet();
+$activeWorksheet = $spreadsheet->getActiveSheet();
+$activeWorksheet->setCellValue('A1', 'Hello World !');
+
+$writer = new Xlsx($spreadsheet);
+$writer->save('hello world.xlsx');
 
 
-$slideritemsHTMLStart =<<<SLIDE
+$slideritemsHTMLStart = <<<SLIDE
 
 
 <h1> All Sliders </h1>
@@ -30,12 +38,12 @@ SLIDE;
 
 ?>
 <?php
-	$slideHTMLContent = null;
-	$src = null;
-    foreach($slideritems as $key=>$slide):
-		$ser = ++$key;
-		$src = $webroot . 'uploads/' . $slide->src;
-		$slideHTMLContent .=<<<TR
+$slideHTMLContent = null;
+$src = null;
+foreach ($slideritems as $key => $slide) :
+	$ser = ++$key;
+	$src = $webroot . 'uploads/' . $slide->src;
+	$slideHTMLContent .= <<<TR
 
 			<tr>
 				<td title="$slide->uuid">$ser</td>
@@ -47,10 +55,10 @@ SLIDE;
 			</tr>
 
 	TR;
-	
-	endforeach;
-	
-	$slideHTMLEnd = <<<EOF
+
+endforeach;
+
+$slideHTMLEnd = <<<EOF
 			</tbody>
 			</table>
 	
@@ -58,13 +66,15 @@ SLIDE;
 	EOF;
 
 
-	$slideHTMLList = $slideritemsHTMLStart.$slideHTMLContent.$slideHTMLEnd;
-
-	//echo $slideHTMLList;
+$slideHTMLList = $slideritemsHTMLStart . $slideHTMLContent . $slideHTMLEnd;
 
 
 
-	$mpdf = new \Mpdf\Mpdf();
-	$mpdf->WriteHTML($slideHTMLList);
-	$mpdf->Output();
-    ?> 
+
+
+
+
+
+
+
+?> 
