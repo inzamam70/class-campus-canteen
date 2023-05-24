@@ -65,6 +65,8 @@ $slideritems = json_decode($sliderjason);
 								<a href="slider_create.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: green;"><i class="icon-file-excel"></i></a>
 								<a href="slider_create.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: red;"><i class="icon-file-pdf"></i></a>  								
 								<a href="slider_create.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: green;"><i class="icon-printer2"></i></a> 
+								<a href="slider_index_print.php" target="_blank" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: purple;"><i class="icon-IE"></i></a>  
+								<a href="slider_index_print.php" target="_blank" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: blue;"><i class="icon-file-word"></i></a>  
 							</div>
 
 							<div class="table-responsive">
@@ -93,7 +95,7 @@ $slideritems = json_decode($sliderjason);
 
 												</div>
 												<div class="d-flex flex-wrap justify-content-center p-3">
-													<a href="slider_show.php?id=<?= $slide->id ?> " class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1 " style="color: green;"><i class="icon-eye"></i></a>
+													<a href="slider_show.php?id=<?= $slide->id ?> " class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1 " style="color: green;"><i class="icon-zoomin3"></i></a>
 													<a href="slider_edit.php?id=<?= $slide->id ?>" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1" style="color: blue;"><i class="icon-pencil"></i></a>
 													<a href="slider_delete.php?id=<?= $slide->id ?>" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1" style="color: red;"><i class="icon-trash"></i></a>
 												</div>

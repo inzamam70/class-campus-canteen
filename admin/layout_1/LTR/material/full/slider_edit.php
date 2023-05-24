@@ -73,7 +73,7 @@
 							</div>
 
 			                <div class="card-body">
-			                	<form action="slider_edit_processor.php" method="post" >
+			                	<form action="slider_edit_processor.php" method="post" enctype="multipart/form-data">
 								<input name="id" type="text" class="form-control"  value="<?=$aslide->id?>" />
 										<input name="uuid" type="text" class="form-control"  value="<?=$aslide->uuid?>" />
 									<div class="form-group">
