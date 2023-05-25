@@ -1,6 +1,6 @@
 <?php
 include_once($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'config.php');
-$productlist = file_get_contents($frontenddatasource."productlist.json");
+$productlist = file_get_contents($frontenddatasource . "productlist.json");
 $productlists = json_decode($productlist);
 
 
@@ -8,27 +8,27 @@ $productlists = json_decode($productlist);
 ?>
 
 <?php
-foreach($productlists as $key => $productitem):
+foreach ($productlists as $key => $productitem) :
 
 ?>
-              <div class="col-12 col-md-12 col-lg-4 gy-4">
-                <div class="card  text-center bg-white pb-2">
-                  <div class="card-body text-dark">
-                    <div class="img-area mb-4">
-                      <img src="<?=$productitem->src?>" alt=""  width="100%" height="100%">
-                    </div>
-                    <h3 class="card-title"><?=$productitem->title?></h3>
-                    <p class="lead text-danger"><?=$productitem->caption?></p>
-                    <a href="<?=$productitem->url?>" class="btn bg-warning text-dark">See More</a>
-                  </div>
-                </div>
-              </div>
+  <div class="col-12 col-md-12 col-lg-4 gy-4">
+    <div class="card  text-center bg-white pb-2">
+      <div class="card-body text-dark">
+        <div class="img-area mb-4">
+          <img src="<?= $webroot . 'uploads/' . $productitem->src  ?>" alt="" width="100%" height="100%">
+        </div>
+        <h3 class="card-title"><?= $productitem->tittle ?></h3>
+        <p class="lead text-danger"><?= $productitem->caption ?></p>
+        <a href="product_show.php?id=<?= $productitem->id ?>" class="btn bg-warning text-dark">See More</a>
+      </div>
+    </div>
+  </div>
 
-              <?php
-                endforeach
-              ?>
-    
-              <!-- <div class="col-12 col-md-12 col-lg-4 gy-4">
+<?php
+endforeach
+?>
+
+<!-- <div class="col-12 col-md-12 col-lg-4 gy-4">
                 <div class="card  text-center bg-white pb-2">
                   <div class="card-body text-dark">
                     <div class="img-area mb-4">

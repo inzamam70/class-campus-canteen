@@ -1,7 +1,7 @@
 <?php
 include_once($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'config.php');
-$sliderjason = file_get_contents($frontenddatasource . "slider.json");
-$slideritems = json_decode($sliderjason);
+$productjason = file_get_contents($frontenddatasource . "productlist.json");
+$productitems = json_decode($productjason);
 ?>
 
 <!DOCTYPE html>
@@ -52,7 +52,7 @@ $slideritems = json_decode($sliderjason);
 						?>
 						
 							<div class="card-header header-elements-inline">
-								<h5 class="card-title">Slides</h5>
+								<h5 class="card-title">Product list</h5>
 								<div class="header-elements">
 									<div class="list-icons">
 										<a class="list-icons-item" data-action="collapse"></a>
@@ -67,7 +67,7 @@ $slideritems = json_decode($sliderjason);
 									<li><a href="slider_index_grid.php">Grid View</a></li>
 									<li><a href="slider_index.php">List View</a></li>
 								</ul>
-								<a href="slider_create.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: blue;"><i class="icon-plus2"></i></a> 
+								<a href="add_product.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: blue;"><i class="icon-plus2"></i></a> 
 								<a href="slider_delete.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: red;"><i class="icon-trash"></i></a>  
 								<a href="slider_download_xl.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: green;"><i class="icon-file-excel"></i></a>
 								<a href="slider_download_pdf.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: red;"><i class="icon-file-pdf"></i></a>  								
@@ -83,7 +83,7 @@ $slideritems = json_decode($sliderjason);
 											<th>#</th>
 											<th>Title</th>
 											<th>Src</th>
-											<th>Alt</th>
+											<!-- <th>Alt</th> -->
 											<th>Caption</th>
 											<th>Action</th>
 										</tr>
@@ -91,14 +91,14 @@ $slideritems = json_decode($sliderjason);
 									<tbody>
 
 										<?php
-										foreach ($slideritems as $key => $slide) :?>
+										foreach ($productitems as $key => $slide) :?>
 
 
 											<tr>
 												<td title="<?= $slide->uuid ?>"><?= ++$key ?></td>
 												<td><?= $slide->tittle ?></td>
 												<td><img src="<?=filter_var($slide->src,FILTER_VALIDATE_URL)? $slide->src : $webroot.'uploads/'.$slide->src ?>" style="width:60px;height:60px"></td>
-												<td><?= $slide->alt ?></td>
+												
 												<td><?= $slide->caption ?></td>
 												<td>
 													<div class="d-flex justify-content-between  p-3">
