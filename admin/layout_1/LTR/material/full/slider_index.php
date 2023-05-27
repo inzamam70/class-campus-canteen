@@ -1,8 +1,17 @@
 <?php
 include_once($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'config.php');
-$sliderjason = file_get_contents($frontenddatasource . "slider.json");
-$slideritems = json_decode($sliderjason);
+ $sliderjason = file_get_contents($frontenddatasource . "slider.json");
+ $slideritems = json_decode($sliderjason);
 ?>
+<?php
+
+use \BITM\CUMPUS\Slider;
+
+ $slider = new Slider;
+ 
+ $slideritems = $slider->index();
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,15 +51,15 @@ $slideritems = json_decode($sliderjason);
 
 						<!-- Bordered table -->
 						<div class="card">
-						<?php
-						$message = flush_session('message');
-						if($message):
-						?>
-						<div class="alert alert_success"><?=$message?></div>
-						<?php
-						endif
-						?>
-						
+							<?php
+							$message = flush_session('message');
+							if ($message) :
+							?>
+								<div class="alert alert_success"><?= $message ?></div>
+							<?php
+							endif
+							?>
+
 							<div class="card-header header-elements-inline">
 								<h5 class="card-title">Slides</h5>
 								<div class="header-elements">
@@ -67,13 +76,13 @@ $slideritems = json_decode($sliderjason);
 									<li><a href="slider_index_grid.php">Grid View</a></li>
 									<li><a href="slider_index.php">List View</a></li>
 								</ul>
-								<a href="slider_create.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: blue;"><i class="icon-plus2"></i></a> 
-								<a href="slider_delete.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: red;"><i class="icon-trash"></i></a>  
+								<a href="slider_create.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: blue;"><i class="icon-plus2"></i></a>
+								<a href="slider_delete.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: red;"><i class="icon-trash"></i></a>
 								<a href="slider_download_xl.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: green;"><i class="icon-file-excel"></i></a>
-								<a href="slider_download_pdf.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: red;"><i class="icon-file-pdf"></i></a>  								
+								<a href="slider_download_pdf.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: red;"><i class="icon-file-pdf"></i></a>
 								<a href="slider_index_print.php" target="_blank" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: green;"><i class="icon-printer2"></i></a>
-								<a href="slider_index_print.php" target="_blank" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: purple;"><i class="icon-IE"></i></a>  
-								<a href="slider_index_print.php" target="_blank" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: blue;"><i class="icon-file-word"></i></a>  
+								<a href="slider_index_print.php" target="_blank" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: purple;"><i class="icon-IE"></i></a>
+								<a href="slider_index_print.php" target="_blank" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: blue;"><i class="icon-file-word"></i></a>
 							</div>
 
 							<div class="table-responsive">
@@ -91,34 +100,32 @@ $slideritems = json_decode($sliderjason);
 									<tbody>
 
 										<?php
-										foreach ($slideritems as $key => $slide) :?>
+										if ($slideritems)
+											foreach ($slideritems as $key => $slide) : ?>
 
 
 											<tr>
 												<td title="<?= $slide->uuid ?>"><?= ++$key ?></td>
 												<td><?= $slide->tittle ?></td>
-												<td><img src="<?=filter_var($slide->src,FILTER_VALIDATE_URL)? $slide->src : $webroot.'uploads/'.$slide->src ?>" style="width:60px;height:60px"></td>
+												<td><img src="<?= filter_var($slide->src, FILTER_VALIDATE_URL) ? $slide->src : $webroot . 'uploads/' . $slide->src ?>" style="width:60px;height:60px"></td>
 												<td><?= $slide->alt ?></td>
 												<td><?= $slide->caption ?></td>
 												<td>
 													<div class="d-flex justify-content-between  p-3">
 														<a href="slider_show.php?id=<?= $slide->id ?> " class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1 " style="color: green;"><i class="icon-zoomin3"></i></a>
-														<a href="slider_edit.php?id=<?=$slide->id ?>" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1" style="color: blue;"><i class="icon-pencil"></i></a>
-														
+														<a href="slider_edit.php?id=<?= $slide->id ?>" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1" style="color: blue;"><i class="icon-pencil"></i></a>
+
 														<form action="slider_delete.php" method="post">
-														
-<<<<<<< HEAD
-														<button type="submit" onclick="return confirm('Are You Confirm?')" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1" style="color: red;"><i class="icon-trash"></i></button>
-=======
-														<button type="submit" onclick="return confirm ('are you Confirm?')" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1" style="color: red;"><i class="icon-trash"></i></button>
->>>>>>> origin
-															<input type="hidden" name="id" value="<?=$slide->id?>">
+
+															<button type="submit" onclick="return confirm ('are you Confirm?')" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1" style="color: red;"><i class="icon-trash"></i></button>
+
+															<input type="hidden" name="id" value="<?= $slide->id ?>">
 														</form>
 													</div>
 												</td>
 											</tr>
 										<?php
-										endforeach
+											endforeach
 										?>
 									</tbody>
 								</table>
