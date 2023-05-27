@@ -102,10 +102,10 @@ $productitems = json_decode($productjason);
 												<td><?= $slide->caption ?></td>
 												<td>
 													<div class="d-flex justify-content-between  p-3">
-														<a href="slider_show.php?id=<?= $slide->id ?> " class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1 " style="color: green;"><i class="icon-zoomin3"></i></a>
-														<a href="slider_edit.php?id=<?=$slide->id ?>" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1" style="color: blue;"><i class="icon-pencil"></i></a>
+														<a href="product_show.php?id=<?= $slide->id ?> " class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1 " style="color: green;"><i class="icon-zoomin3"></i></a>
+														<a href="product_edit.php?id=<?=$slide->id ?>" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1" style="color: blue;"><i class="icon-pencil"></i></a>
 														
-														<form action="slider_delete.php" method="post">
+														<form action="productlist_delete.php" method="post">
 														
 														<button type="submit" onclick="return confirm('Are You Confirm?')" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1" style="color: red;"><i class="icon-trash"></i></button>
 															<input type="hidden" name="id" value="<?=$slide->id?>">

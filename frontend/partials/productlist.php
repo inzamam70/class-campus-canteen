@@ -19,7 +19,7 @@ foreach ($productlists as $key => $productitem) :
         </div>
         <h3 class="card-title"><?= $productitem->tittle ?></h3>
         <p class="lead text-danger"><?= $productitem->caption ?></p>
-        <a href="product_show.php?id=<?= $productitem->id ?>" class="btn bg-warning text-dark">See More</a>
+        <a href="productdetails.php" class="btn bg-warning text-dark">See More</a>
       </div>
     </div>
   </div>
