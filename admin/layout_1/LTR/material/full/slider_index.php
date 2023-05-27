@@ -107,7 +107,11 @@ $slideritems = json_decode($sliderjason);
 														
 														<form action="slider_delete.php" method="post">
 														
+<<<<<<< HEAD
 														<button type="submit" onclick="return confirm('Are You Confirm?')" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1" style="color: red;"><i class="icon-trash"></i></button>
+=======
+														<button type="submit" onclick="return confirm ('are you Confirm?')" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1" style="color: red;"><i class="icon-trash"></i></button>
+>>>>>>> origin
 															<input type="hidden" name="id" value="<?=$slide->id?>">
 														</form>
 													</div>
