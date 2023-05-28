@@ -2,22 +2,21 @@
 
 <?php
 
-/** collect the intended ID */
-$id = $_GET['id'];
+use \BITM\CUMPUS\Slider;
+use \BITM\CUMPUS\Utility\Validator;
+use \BITM\CUMPUS\Utility\Utility;
 
 
 
-/** communicate with datasource and get data for that id */
-$sliderjason = file_get_contents($frontenddatasource . "slider.json");
-$slideritems = json_decode($sliderjason);
+$id = Utility::sanitize($_GET['id']);
 
-$slide = null;
-foreach ($slideritems as $aslide) {
-	if ($aslide->id == $id) {
-		$slide = $aslide;
-		break;
-	}
+if(!Validator::empty($id)){
+	$slider = new Slider();
+	$slide = $slider->show($id);
+}else{ // REfactor using Session based message
+	dd("Id cannot be null or empty");
 }
+
 
 
 

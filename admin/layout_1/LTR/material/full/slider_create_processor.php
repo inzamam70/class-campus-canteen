@@ -1,56 +1,39 @@
 <?php include_once($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'config.php') ?>
 <?php
 
+use \BITM\CUMPUS\Slider;
+use \BITM\CUMPUS\Utility\Utility;
+use Intervention\Image\ImageManager;
 
-$filename = $_FILES['image']['name'];
-$filename = uniqid() . "_" . $_FILES['image']['name'];
+$manager = new ImageManager(['driver' => 'imagick']);
 
-$target = $_FILES['image']['tmp_name'];
-$destination = $uploads . $filename;
+$filename = uniqid() . "_" . $_FILES['picture']['name'];
 
-$src = null;
-if (upload($target, $destination)) {
-    $src = $filename;
+try{
+    $img = $manager->make($_FILES['picture']['tmp_name'])
+                    ->resize(300, 200)
+                    ->save($uploads.$filename);
+    $src = $filename ;
+}catch(Intervention\Image\Exception\NotWritableException $e){
+    // d($e);
+}catch(Exception $e){
+    // d($e);
 }
 
-// $id = $_POST['id'];
-// $uuid = $_POST['uuid'];
-// $src = $_POST['url'];
-$alt =  $_POST['alt'];
-$title = $_POST['title'];
-$caption = $_POST['caption'];
+$slider = new Slider();
 
+$slider->alt = Utility::sanitize($_POST['alt']);
+$slider->tittle = Utility::sanitize($_POST['tittle']);
+$slider->caption = Utility::sanitize($_POST['caption']);
+$slider->src = $src;
 
-$slide = [
-    // 'id' => $id,
-    // 'uuid' => $uuid,
-    'src' => $src,
-    'alt' => $alt,
-    'tittle' => $title,
-    'caption' => $caption
-];
+$result = $slider->store($slider);
 
-
-$curentUniqueId = null;
-
-
-$sliderjason = file_get_contents($frontenddatasource . "slider.json");
-$slideritems = json_decode($sliderjason);
-
-if (count($slideritems) > 0) {
-
-    $ids = [];
-    foreach ($slideritems as $aslide) {
-        $ids[] = $aslide->id;
-    }
-    sort($ids);
-    $lastIndex = count($ids) - 1;
-    $highestId = $ids[$lastIndex];
-    $curentUniqueId = $highestId + 1;
-} else {
-    $curentUniqueId = 1;
+if($result){
+    redirect("slider_index.php");
+}else{
+    echo "Data is not stored";
 }
-
 
 
 

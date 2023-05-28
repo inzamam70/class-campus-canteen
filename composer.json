@@ -11,6 +11,8 @@
     },
     "require": {
         "mpdf/mpdf": "^8.1",
-        "phpoffice/phpspreadsheet": "^1.28"
+        "phpoffice/phpspreadsheet": "^1.28",
+        "intervention/image": "^2.7"
+        
     }
  }

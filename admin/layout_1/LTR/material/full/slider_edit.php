@@ -1,26 +1,20 @@
 <?php include_once($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'config.php') ?>
 
 <?php
-   /** collect the intended ID */
- 
-   $id = $_GET['id'];
-// dd($id);
-    
-     /** communicate with datasource and get data for that id */
-	 $sliderjason = file_get_contents($frontenddatasource . "slider.json");
-	 $slideritems = json_decode($sliderjason);
-    
-    $slide = null;
-    foreach($slideritems as $aslide){
-        if($aslide->id == $id){
-            $slide = $aslide;
-            break;
-        }
-    }
+ use \BITM\CUMPUS\Slider;
+ use \BITM\CUMPUS\Utility\Validator;
+ use \BITM\CUMPUS\Utility\Utility;
 	
-    
-    
-    //  d($slide);
+   $id = Utility::sanitize($_GET['id']);
+   
+   if(!Validator::empty($id)){
+	   $slider = new Slider();
+	   $slide = $slider->edit($id);
+	   
+   }else{ // REfactor using Session based message
+	   dd("Id cannot be null or empty");
+   }
+
  
 ?>
 

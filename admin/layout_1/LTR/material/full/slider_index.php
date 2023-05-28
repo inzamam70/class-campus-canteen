@@ -5,10 +5,12 @@ include_once($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'config.php');
 <?php
 
 use \BITM\CUMPUS\Slider;
+use \BITM\CUMPUS\Utility\Validator;
+use \BITM\CUMPUS\Utility\Utility;
 
  $slider = new Slider;
  
- $slideritems = $slider->index();
+ $slides = $slider->index();
 ?>
 
 
@@ -99,8 +101,8 @@ use \BITM\CUMPUS\Slider;
 									<tbody>
 
 										<?php
-										if ($slideritems)
-											foreach ($slideritems as $key => $slide) : ?>
+										if ($slides)
+											foreach ($slides as $key => $slide) : ?>
 
 
 											<tr>
