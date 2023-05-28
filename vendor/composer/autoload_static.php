@@ -43,6 +43,10 @@ class ComposerStaticInit5ce6255d14c476ca5e16d64f51653de9
         array (
             'Complex\\' => 8,
         ),
+        'B' => 
+        array (
+            'BITM\\CUMPUS\\' => 12,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -64,8 +68,8 @@ class ComposerStaticInit5ce6255d14c476ca5e16d64f51653de9
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -98,6 +102,10 @@ class ComposerStaticInit5ce6255d14c476ca5e16d64f51653de9
         'Complex\\' => 
         array (
             0 => __DIR__ . '/..' . '/markbaker/complex/classes/src',
+        ),
+        'BITM\\CUMPUS\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 
